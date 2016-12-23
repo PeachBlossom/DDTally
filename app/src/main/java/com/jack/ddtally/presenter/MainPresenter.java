@@ -13,8 +13,7 @@ import com.jack.ddtally.presenter.contract.MainContract;
 public class MainPresenter extends RxPresenter<MainContract.View> implements MainContract.Presenter {
 
     public MainPresenter(@NonNull MainContract.View oneView) {
-        mView = Preconditions.checkNotNull(oneView);
-        mView.setPresenter(this);
+        attachView(Preconditions.checkNotNull(oneView));
     }
 
 }
